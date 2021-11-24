@@ -14,10 +14,17 @@ export class ContentComponent implements OnInit {
   url?: string;
   @Input()
   price?: string;
-  not_main = false;
-
+  not_main = true;
+  @Input()
+  iscat?: string;
+  @Input()
+  idcat?: string;
+  @Input()
+  route?: string;
+  @Input()
+  ismain?: string;
+  
   ngOnInit(): void {
-
   }
   constructor(private router:Router){
     let url = this.router.url

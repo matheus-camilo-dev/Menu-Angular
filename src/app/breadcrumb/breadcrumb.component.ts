@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 export class BreadcrumbComponent implements OnInit {
   @Input()
   url?:string;
+  @Input()
+  cat_slug?:string;
+  @Input()
+  art_slug?:string;
+  @Input()
+  cat_title?:string;
+  @Input()
+  art_title?:string;
 
   route = '';
   constructor(private router:Router) {

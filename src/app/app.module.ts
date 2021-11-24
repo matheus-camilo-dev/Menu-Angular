@@ -13,7 +13,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatListModule} from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +35,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatListModule,
     NgbModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

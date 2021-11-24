@@ -27,6 +27,7 @@ function generateRoutes(menu:Item[]){
       routes.push({path: menu[i]['slug']+'/'+menu[i]['childrens'][j]['slug'], component: MenuComponent});
     }
   }
+  routes.push({path: "", component: MenuComponent});
   return routes;
 }
 

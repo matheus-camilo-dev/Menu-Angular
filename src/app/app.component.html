@@ -23,7 +23,7 @@
   <div id="container" class="row" >
     <div class="col-4" style="width: 28%;overflow-y:auto;">
       <div class="flex-shrink-0 p-3 bg-white" style="height: 100vh; border-right: 1px solid rgba(110, 67, 67, 0.1);">
-        <h1>Idomy Cursos Online</h1>
+        <a routerLink="/" class="active-link text-decoration-none text-dark"><h1>Idomy Cursos Online</h1></a>
         <ul class="list-unstyled ps-0" *ngFor="let item of menuItems">
           <li class="mb-1">
             <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+ item.id" aria-expanded="false">
@@ -31,7 +31,7 @@
             </button>
             <div class="collapse" id="collapse{{ item.id }}">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small" *ngFor="let subItem of item.childrens">
-                <li><a href="/{{item.slug}}/{{subItem.slug}}" class="h6 link-dark rounded">{{ subItem.name }}</a></li>
+                <li><a routerLink="/{{item.slug}}/{{subItem.slug}}" class="h6 link-dark rounded">{{ subItem.name }}</a></li>
               </ul>
             </div>
           </li>
@@ -39,9 +39,9 @@
     </div>
   </div>
   <div class="col-7" style="width: 72%;overflow-y:auto;">
-    <app-breadcrumb (activate)="changeOfRoutes()" url="{{ url }}"></app-breadcrumb>
+    <app-breadcrumb (activate)="changeOfRoutes()" url="{{ url }}" cat_slug="{{ categoria }}" art_slug="{{ artigo }}" cat_title="{{ categoria_title }}" art_title="{{ artigo_title }}"></app-breadcrumb>
     <div style="margin:30px;">
-      <app-content title="{{ title }}" content="{{ content }}" price="{{ price }}"></app-content>
+      <app-content title="{{ title }}" content="{{ content }}" price="{{ price }}" iscat="{{ isCat }}" idcat="{{ idCat }}" route="{{ route }}" ismain="{{ is_main_route }}"></app-content>
       <br>
     </div>
   </div>

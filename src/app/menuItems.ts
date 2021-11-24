@@ -583,11 +583,12 @@ let j = 1;
 menuItems.forEach(element => {
     element.slug = slugify(element.name);
     let i = 0;
-    element.content += element.name
+    element.content = "Pacote com todos os cursos da seção " + element.name
     element.childrens.forEach(element1 =>{
         element1.slug = slugify(element1.name)
         i = i+1;
         element1.id = i;
+        element1.content = "Curso " + element1.name
         //element.content += `<li>${element1.name}</li>`
     })
     element.id = j

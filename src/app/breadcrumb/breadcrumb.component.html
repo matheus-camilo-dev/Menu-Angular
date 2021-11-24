@@ -1,4 +1,8 @@
 <div class="h-15 border bg-light pd-2" style="border:1px solid red;width:100%;">
   <h2>Caminho de Navegação</h2>
-  <h3>Home{{ url }}</h3>
+  <h3>
+    <a class="text-decoration-none" routerLink="/">Home</a>
+    <a class="text-decoration-none" *ngIf="cat_title != ' '" routerLink="/{{ cat_slug }}"> > {{ cat_title }}</a>
+    <a class="text-decoration-none" *ngIf="art_title != ' '" routerLink="/{{ cat_slug }}/{{ art_slug }}"> > {{ art_title }}</a>
+  </h3>
 </div>
