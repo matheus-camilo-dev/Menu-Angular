@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import menuItems from '../menuItems';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -23,7 +24,11 @@ export class ContentComponent implements OnInit {
   route?: string;
   @Input()
   ismain?: string;
-  
+  @Input()
+  hasartigo?:string;
+  @Input()
+  items?:string;
+
   ngOnInit(): void {
   }
   constructor(private router:Router){

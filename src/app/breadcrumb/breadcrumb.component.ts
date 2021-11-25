@@ -21,14 +21,11 @@ export class BreadcrumbComponent implements OnInit {
   route = '';
   constructor(private router:Router) {
     this.route = this.router.url;
-    console.log("breadcrumb: ", this.url)
   }
 
   ngOnInit(): void {
   }
   changeOfRoutes(){
-    console.log(this.router.url)
-    console.log('abc')
   }
 
 }

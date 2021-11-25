@@ -41,7 +41,7 @@
   <div class="col-7" style="width: 72%;overflow-y:auto;">
     <app-breadcrumb (activate)="changeOfRoutes()" url="{{ url }}" cat_slug="{{ categoria }}" art_slug="{{ artigo }}" cat_title="{{ categoria_title }}" art_title="{{ artigo_title }}"></app-breadcrumb>
     <div style="margin:30px;">
-      <app-content title="{{ title }}" content="{{ content }}" price="{{ price }}" iscat="{{ isCat }}" idcat="{{ idCat }}" route="{{ route }}" ismain="{{ is_main_route }}"></app-content>
+      <app-content title="{{ title }}" content="{{ content }}" price="{{ price }}" iscat="{{ isCat }}" idcat="{{ idCat }}" route="{{ route }}" ismain="{{ is_main_route }}" hasartigo="{{ artigo_title }}" items="{{ items_artigo }}"></app-content>
       <br>
     </div>
   </div>
