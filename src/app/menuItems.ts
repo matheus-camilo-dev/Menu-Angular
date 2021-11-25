@@ -292,7 +292,7 @@ let menuItems: Item[] = [
           price: 10.00
         },
         {
-          name: "Golang (GO) para aplicativos móveis",
+          name: "Golang para aplicativos móveis",
           content: "Default",
           price: 10.00
         },
@@ -374,7 +374,7 @@ let menuItems: Item[] = [
           price: 10.00
         },
         {
-          name: "C# para games",
+          name: "C sharpe para games",
           content: "Default",
           price: 10.00
         },
@@ -430,7 +430,7 @@ let menuItems: Item[] = [
           price: 10.00
         },
         {
-          name: "Certifield Kubernetes Application Developer (CKAD)",
+          name: "Certifield Kubernetes Application Developer",
           content: "Default",
           price: 10.00
         },
@@ -585,7 +585,17 @@ menuItems.forEach(element => {
     let i = 0;
     element.content = "Pacote com todos os cursos da seção " + element.name
     element.childrens.forEach(element1 =>{
-        element1.slug = slugify(element1.name)
+        if(element1.name == "C++"){
+          element1.slug = "c-plus-plus"
+        }else if(element1.name == "Golang (Go)"){
+          element1.slug = "golang-go"
+        }else if(element1.name == 'C++ para aplicativos móveis'){
+          element1.slug = "c-plus-plus-para-aplicativos-moveis"
+        }else if(element1.name=='C++ para games'){
+          element1.slug = 'c-plus-plus-para-games'
+        }else{
+          element1.slug = slugify(element1.name)
+        }
         i = i+1;
         element1.id = i;
         element1.content = "Curso " + element1.name
